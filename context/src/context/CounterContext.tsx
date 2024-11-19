@@ -7,8 +7,6 @@ interface CounterContextType {
   }
  export const CounterContext = createContext<CounterContextType | undefined>(undefined);
 
-
-
 // 2 - Criar provider
 
 interface CounterProviderProps{

@@ -1,9 +1,9 @@
 import {useContext}  from 'react';
 import {CounterContext} from "../context/CounterContext";
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Button, Text } from '@chakra-ui/react';
 
 const Home = () =>{
-    
+
     // Acessando o contexto
   const context = useContext(CounterContext);
 
@@ -12,12 +12,15 @@ const Home = () =>{
     throw new Error("CounterContext deve ser usado dentro de um CounterContextProvider");
   }
    // Desestruturando as propriedades do contexto
-   const {count} = context;
+   const {count, setCounter} = context;
 
     return (
         <Box>
             <Text>Home</Text>
             <Text>Valor do contador:{count}</Text>
+            <Text>Alterar o contexto</Text>
+            {/* // 3 - Alterando o contexto */}
+            <Button onClick={()=> setCounter(count +1)}>Adicionar valor ao contador</Button>
         </Box>
     );
 };
