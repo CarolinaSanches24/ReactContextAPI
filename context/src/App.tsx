@@ -1,4 +1,3 @@
-import { Text } from '@chakra-ui/react';
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Products from './pages/Products';
@@ -10,7 +9,6 @@ function App() {
 
   return (
     <div className='App'>
-      <Text>Context</Text>
       <BrowserRouter>
       <NavBar/>
         <Routes>
